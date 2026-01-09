@@ -39,7 +39,7 @@ async function loadRepos(user) {
     const reposContainer = document.getElementById("repos");
     reposContainer.innerHTML = "Loading";
     let url = "";
-    if (user.toLowerCase() === "hacker41") {
+    if (user.toLowerCase() === "thehacker41") {
         url = `https://api.github.com/orgs/${MAIN_REPO_OWNER}/repos`;
     } else {
         url = `https://api.github.com/users/${user}/repos`;
