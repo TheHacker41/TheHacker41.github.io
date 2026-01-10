@@ -1,4 +1,6 @@
-<!--     <style>
+<!--<html>
+        <head>
+        <style>
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f5f5f5;
@@ -9,7 +11,6 @@
             align-items: center;
             min-height: 100vh;
         }
-
         .profile-container {
             display: grid;
             grid-template-columns: 150px 1fr 200px;
@@ -21,7 +22,6 @@
             max-width: 900px;
             width: 100%;
         }
-
         .profile-picture img {
             width: 150px;
             height: 150px;
@@ -29,31 +29,26 @@
             object-fit: cover;
             border: 3px solid #333;
         }
-
         .description {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-
         .description h2 {
             margin: 0 0 10px 0;
             font-size: 24px;
             color: #333;
         }
-
         .description p {
             margin: 0;
             font-size: 16px;
             color: #666;
         }
-
         .links {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-
         .links a {
             text-decoration: none;
             background-color: #24292f;
@@ -64,30 +59,27 @@
             text-align: center;
             transition: background-color 0.3s;
         }
-
         .links a:hover {
             background-color: #444;
         }
-
-        /* Responsive */
         @media (max-width: 800px) {
             .profile-container {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
             .links {
                 flex-direction: row;
                 justify-content: center;
                 flex-wrap: wrap;
                 gap: 10px;
             }
-
             .links a {
                 margin: 0;
             }
         }
     </style>
+    </head>
+    <body>
     <div class="profile-container">
         <div class="profile-picture">
             <img src="https://github.com/TheHacker41.png" alt="Profile Picture">
@@ -101,6 +93,8 @@
             <a href="https://discord.gg/4d9hJSVXca" target="_blank">Discord</a>
         </div>
     </div>
+    </body>
+</html>
 -->
 <div style="display:none;">
 <p align="center">
