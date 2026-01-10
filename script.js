@@ -1,4 +1,4 @@
-const MAIN_REPO_OWNER = "infinitecampus41";
+onst MAIN_REPO_OWNER = "infinitecampus41";
 const MAIN_REPO_NAME = "InfiniteCampus";
 let currentUser = null;
 loadContributors();
@@ -79,12 +79,34 @@ async function loadContributors() {
 
 async function loadReadme(user) {
     const readmeBox = document.getElementById("readme");
+    readmeBox.innerHTML = "Loading README...";
     const url = `https://raw.githubusercontent.com/${user}/${user}/main/README.md`;
-    const res = await fetch(url);
-    if (!res.ok) {
-        readmeBox.textContent = "No README.md Found.";
-        return;
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            readmeBox.textContent = "No README.md Found.";
+            return;
+        }
+        let text = await res.text();
+        text = text.replace(/<!--([\s\S]*?)-->/g, '$1');
+        text = text.replace(/```html\s*([\s\S]*?)```/g, '$1');
+        marked.setOptions({
+            gfm: true,
+            breaks: true,
+            headerIds: true,
+            mangle: false,
+            sanitizer: null,
+            sanitize: false
+        });
+        readmeBox.innerHTML = marked.parse(text);
+        readmeBox.querySelectorAll('style').forEach(el => {
+            const newEl = document.createElement(el.tagName.toLowerCase());
+            newEl.textContent = el.textContent;
+            el.replaceWith(newEl);
+        });
+        readmeBox.classList.add("markdown-body");
+
+    } catch (err) {
+        readmeBox.textContent = "Failed to load README.";
     }
-    const text = await res.text();
-    readmeBox.textContent = text;
 }
