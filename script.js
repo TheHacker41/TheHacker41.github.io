@@ -8,7 +8,6 @@ function resetToContributors() {
     document.getElementById("projectTitle").style.display = "none";
     document.getElementById("projectLine").style.display = "none";
     document.getElementById("repos").style.display = "none";
-    document.getElementById("readmeTitle").style.display = "none";
     document.getElementById("readme").style.display = "none";
     document.getElementById("backButton").style.display = "none";
     document.querySelector("h3.mt-4").style.display = "block";
@@ -23,7 +22,6 @@ async function loadUser(user) {
     document.getElementById("repos").style.display = "grid";
     document.getElementById("projectTitle").style.display = "block";
     document.getElementById("projectLine").style.display = "block";
-    document.getElementById("readmeTitle").style.display = "block";
     document.getElementById("readme").style.display = "block";
     document.getElementById("backButton").style.display = "inline-block";
     document.getElementById("repos").innerHTML = "Loading...";
@@ -105,8 +103,7 @@ async function loadReadme(user) {
             el.replaceWith(newEl);
         });
         readmeBox.classList.add("markdown-body");
-
     } catch (err) {
-        readmeBox.textContent = "Failed to load README.";
+        readmeBox.textContent = "Failed To Load README.";
     }
 }
