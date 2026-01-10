@@ -1,4 +1,4 @@
-onst MAIN_REPO_OWNER = "infinitecampus41";
+const MAIN_REPO_OWNER = "infinitecampus41";
 const MAIN_REPO_NAME = "InfiniteCampus";
 let currentUser = null;
 loadContributors();
