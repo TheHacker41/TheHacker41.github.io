@@ -1,21 +1,11 @@
 <!--<html>
         <head>
         <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
         .profile-container {
             display: grid;
             grid-template-columns: 150px 1fr 200px;
             gap: 20px;
-            background-color: #fff;
+            background-color: #111;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -37,12 +27,12 @@
         .description h2 {
             margin: 0 0 10px 0;
             font-size: 24px;
-            color: #333;
+            color: lime;
         }
         .description p {
             margin: 0;
             font-size: 16px;
-            color: #666;
+            color: #fff;
         }
         .links {
             display: flex;
